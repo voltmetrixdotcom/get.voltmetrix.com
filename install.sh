@@ -1,5 +1,15 @@
 #!/bin/bash
 
-curl https://get.voltmetrix.com/voltmetrix -O /usr/local/bin/voltmetrix
+# Install Voltmetrix CLI
+echo "Installing Voltmetrix CLI..."
+
+# Install Voltmetrix CLI using curl
+curl https://get.voltmetrix.com/voltmetrix -o /usr/local/bin/voltmetrix
+
+# Make Voltmetrix CLI executable
+
 chmod +x /usr/local/bin/voltmetrix
-echo "Voltmetrix CLI installed to /usr/local/bin > refer to https://voltmetrix.com/docs to learn how to use it."
+
+# Greet the user
+
+echo "Voltmetrix CLI installed successfully!"
