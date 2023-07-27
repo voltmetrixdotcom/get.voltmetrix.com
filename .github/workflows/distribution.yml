@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout get.voltmetrix.com code
         uses: actions/checkout@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
 
       - name: Get latest release information
         id: get_release
