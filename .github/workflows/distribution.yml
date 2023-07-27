@@ -33,11 +33,13 @@ jobs:
           mv voltmetrix.exe windows/
 
       - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-        run: |
-          git config --local user.email "ignacio@voltmetrix.com"
-          git config --local user.name "xe-nvdk"
-          git add .
-          git commit -m "Update binaries to ${{ steps.get_release.outputs.release }}"
-          git push
+          COMMIT_MESSAGE: "Update binaries to ${{ steps.get_release.outputs.release }}"
+          COMMIT_USER_NAME: "GitHub Actions"
+          COMMIT_USER_EMAIL: "ignacio@voltmetrix.com"
+          COMMIT_AUTHOR: "GitHub Actions"
+          COMMIT_AUTHOR_EMAIL: "ignacio@voltmetrix.com"
+          BRANCH: "main"
+          FILES: "linux/voltmetrix windows/voltmetrix.exe"
