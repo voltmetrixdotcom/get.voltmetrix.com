@@ -33,7 +33,7 @@ jobs:
           mv voltmetrix.exe windows/
 
       - name: Commit and push changes
-        env:
+        with:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         run: |
           git config --local user.email "ignacio@voltmetrix.com"
