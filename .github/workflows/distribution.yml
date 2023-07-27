@@ -39,7 +39,5 @@ jobs:
           COMMIT_MESSAGE: "Update binaries to ${{ steps.get_release.outputs.release }}"
           COMMIT_USER_NAME: "xe-nvdk"
           COMMIT_USER_EMAIL: "ignacio@voltmetrix.com"
-          COMMIT_AUTHOR: "ignacio@voltmetrix.com"
-          COMMIT_AUTHOR_EMAIL: "ignacio@voltmetrix.com"
           BRANCH: "main"
           FILES: "linux/voltmetrix windows/voltmetrix.exe"
