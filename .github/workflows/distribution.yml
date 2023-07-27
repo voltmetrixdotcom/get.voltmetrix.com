@@ -31,6 +31,8 @@ jobs:
           mv voltmetrix.exe windows/
 
       - name: Commit and push changes
+      - env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Update binaries for release ${{ steps.get_release.outputs.release }}"
