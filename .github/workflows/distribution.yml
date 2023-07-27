@@ -35,7 +35,6 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
           COMMIT_MESSAGE: "Update binaries to ${{ steps.get_release.outputs.release }}"
           COMMIT_USER_NAME: "xe-nvdk"
           COMMIT_USER_EMAIL: "ignacio@voltmetrix.com"
